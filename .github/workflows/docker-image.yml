@@ -13,10 +13,9 @@ jobs:
     runs-on: local-mac
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Stop current container
-      run: docker stop my_container  
+    - uses: actions/checkout@v3  
     - name: Build the Docker image
       run: docker build . -t node
+
     - name: Creation of container
       run: docker run  --name my_container  -p 49160:3000 -d node
