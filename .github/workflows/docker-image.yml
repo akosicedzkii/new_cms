@@ -14,9 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Stop current container
-      run: docker stop ode  
+    # - name: Stop current container
+    #   run: docker stop node  
     - name: Build the Docker image
       run: docker build . -t node
     - name: Creation of container
-      run: docker run -p 49160:3000 -d node  
+      run: docker run -p 49160:3000 -d node my_container  
