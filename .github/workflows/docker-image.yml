@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: Cederics-Air
+    runs-on: local-mac
 
     steps:
     - uses: actions/checkout@v3
